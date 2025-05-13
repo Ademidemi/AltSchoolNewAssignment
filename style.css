@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  margin: 100px 50px;
+  background: linear-gradient(90deg, #080c11, #65ccbf);
+  height: 100vh;
+  font-family: "Kode Mono", serif;
+}
+h2 {
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 50px;
+}
+.maincon {
+  margin: 100px 0;
+}
+.maincon a {
+  text-decoration: none;
+  color: black;
+  font-size: 36px;
+  font-weight: bolder;
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 50px;
+}
