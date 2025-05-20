@@ -3,30 +3,270 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  text-align: center;
-  margin: 100px 50px;
-  background: linear-gradient(90deg, #080c11, #65ccbf);
-  height: 100vh;
-  font-family: "Kode Mono", serif;
+  font-family: sans-serif;
+  background-color: #fdf6e9;
+  color: #333;
 }
-h2 {
-  font-size: 50px;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000;
-  margin-bottom: 50px;
-}
-.maincon {
-  margin: 100px 0;
-}
-.maincon a {
-  text-decoration: none;
-  color: black;
-  font-size: 36px;
-  font-weight: bolder;
+
+header {
   background-color: #fff;
-  padding: 20px 40px;
+  padding: 1rem 0;
+  text-align: center;
+  padding: 10px;
+}
+
+header img {
+  display: inline-block;
+}
+
+.profile-card {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1030px;
+  margin: auto;
+  border-bottom: 1px solid #21212166;
+  margin-bottom: 10px;
+  height: 250px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 0 50px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+}
+
+.details h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.details .title {
+  color: #555;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.edit-profile {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #494949;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.edit-profile >img{
+  height: 0.7rem;
+}
+
+
+.edit-profile:hover {
+  opacity: 0.5;
+}
+
+.new-post {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 3.5rem;
+}
+
+.new-post:hover {
+  background-color: #212121cc;
+}
+
+.grid-layout {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.grid-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.grid-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-label p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.grid-label img {
+  width: 1em;
+  height: 1em;
+  margin-top: 4px;
+  font-weight: 400;
+  color: #212121b2;
+  opacity: 0.4;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.grid-label img:hover {
+  font-weight: 900;
+  /* Increased thickness */
+  opacity: 1;
+}
+
+.grid-label .like-btn {
+  width: 1em;
+  height: 1em;
+  margin-top: 4px;
+  font-weight: 400;
+  color: #212121b2;
+  opacity: 0.4;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+footer {
+  background-color: #fdf6e9;
+  padding: 3rem 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer p {
+  line-height: 1.75;
+}
+
+.footer p span {
+  color: #212121b2;
+}
+
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .details {
+    height: auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .bio {
+    text-align: center;
+  }
+
+  .btn-section {
+    width: 100%;
+  }
+
+  .new-post {
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .grid-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .grid-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .details h2 {
+    font-size: 1.3rem;
+  }
+
+  .details .title {
+    font-size: 0.9rem;
+  }
+
+  .edit-profile {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 1.5rem 0;
+  }
 }
